@@ -19,7 +19,6 @@ class Brut
      */
     public function connect(string $user, string $pass, string $host, ?string $proxy = null, string $port = '22'): bool
     {
-        $return  = null;
         $command = "/usr/bin/sshpass -p {$pass} ssh {$user}@{$host} -p{$port} 'echo \$USER'";
 
         if ($proxy) {
