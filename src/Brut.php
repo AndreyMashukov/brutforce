@@ -22,7 +22,7 @@ class Brut
         $command = "/usr/bin/sshpass -p {$pass} ssh {$user}@{$host} -p{$port} 'echo \$USER'";
 
         if ($proxy) {
-            $command .= " -o \"ProxyCommand = nc - X connect - x {$proxy} %h % p\"";
+            $command .= " -o \"ProxyCommand = nc - X connect - x {$proxy} %h %p\"";
         }
 
         $process = new Process($command);
